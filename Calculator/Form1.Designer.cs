@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.Btn_Clear = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Btn_Sign = new System.Windows.Forms.Button();
+            this.Btn_Mod = new System.Windows.Forms.Button();
             this.Btn_7 = new System.Windows.Forms.Button();
             this.Btn_8 = new System.Windows.Forms.Button();
             this.Btn_9 = new System.Windows.Forms.Button();
@@ -58,24 +58,27 @@
             this.Btn_Clear.TabIndex = 0;
             this.Btn_Clear.Text = "AC";
             this.Btn_Clear.UseVisualStyleBackColor = true;
+            this.Btn_Clear.Click += new System.EventHandler(this.Btn_Clear_Click);
             // 
-            // button2
+            // Btn_Sign
             // 
-            this.button2.Location = new System.Drawing.Point(66, 54);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "+/-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_Sign.Location = new System.Drawing.Point(66, 54);
+            this.Btn_Sign.Name = "Btn_Sign";
+            this.Btn_Sign.Size = new System.Drawing.Size(36, 23);
+            this.Btn_Sign.TabIndex = 1;
+            this.Btn_Sign.Text = "+/-";
+            this.Btn_Sign.UseVisualStyleBackColor = true;
+            this.Btn_Sign.Click += new System.EventHandler(this.Btn_Sign_Click);
             // 
-            // button3
+            // Btn_Mod
             // 
-            this.button3.Location = new System.Drawing.Point(117, 54);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(36, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "%";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Btn_Mod.Location = new System.Drawing.Point(117, 54);
+            this.Btn_Mod.Name = "Btn_Mod";
+            this.Btn_Mod.Size = new System.Drawing.Size(36, 23);
+            this.Btn_Mod.TabIndex = 2;
+            this.Btn_Mod.Text = "%";
+            this.Btn_Mod.UseVisualStyleBackColor = true;
+            this.Btn_Mod.Click += new System.EventHandler(this.Btn_Mod_Click);
             // 
             // Btn_7
             // 
@@ -194,6 +197,7 @@
             this.Btn_Eq.TabIndex = 19;
             this.Btn_Eq.Text = "=";
             this.Btn_Eq.UseVisualStyleBackColor = true;
+            this.Btn_Eq.Click += new System.EventHandler(this.Btn_Eq_Click);
             // 
             // Btn_Add
             // 
@@ -265,8 +269,8 @@
             this.Controls.Add(this.Btn_9);
             this.Controls.Add(this.Btn_8);
             this.Controls.Add(this.Btn_7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Btn_Mod);
+            this.Controls.Add(this.Btn_Sign);
             this.Controls.Add(this.Btn_Clear);
             this.Name = "frm_Main";
             this.Text = "Calculator";
@@ -278,8 +282,8 @@
         #endregion
 
         private System.Windows.Forms.Button Btn_Clear;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Btn_Sign;
+        private System.Windows.Forms.Button Btn_Mod;
         private System.Windows.Forms.Button Btn_7;
         private System.Windows.Forms.Button Btn_8;
         private System.Windows.Forms.Button Btn_9;

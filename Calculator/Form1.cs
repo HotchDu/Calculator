@@ -27,6 +27,7 @@ namespace Calculator
 
         private void DisPlay(int num)
         {
+            //显示要考虑的问题： 是否包含小数，是否存在数字在显示屏幕上
             if(point)
             {
                 dotNum++;
@@ -34,14 +35,15 @@ namespace Calculator
                 {
                     Tex_ShowResult.Text += "0";
                 }
-                else
+                if(num != 0)
                 {
                     Tex_ShowResult.Text = Convert.ToString(Convert.ToDouble(Tex_ShowResult)) + num / (Math.Pow(10, dotNum));
                 }
             }
-            else
+            else //不包含小数点
             {
-                Tex_ShowResult.Text = Tex_ShowResult.Text.Substring(0, Tex_ShowResult.Text.Length - 1);
+
+                //Tex_ShowResult.Text = Tex_ShowResult.Text.Substring(0, Tex_ShowResult.Text.Length - 1);
                 Tex_ShowResult.Text = Convert.ToString(Convert.ToDouble(Tex_ShowResult.Text) * 10 + num);
                 Tex_ShowResult.Text += ".";
             }
@@ -130,5 +132,114 @@ namespace Calculator
             operat("-");
         }
 
+        private void Btn_Mod_Click(object sender, EventArgs e)
+        {
+            operat("%");
+        }
+
+        private void Btn_Sign_Click(object sender, EventArgs e)
+        {
+            Tex_ShowResult.Text = Convert.ToString(double.Parse(Tex_ShowResult.Text) * -1);
+        }
+
+        private void Btn_Eq_Click(object sender, EventArgs e)
+        {
+            if(takeEqual)
+            {
+                dblNum = dblNumB = double.Parse(Tex_ShowResult.Text);
+                if(oper == "+")
+                {
+                    Tex_ShowResult.Text = Convert.ToString(dblNumA + dblNumB);
+                }
+                if (oper == "-")
+                {
+                    Tex_ShowResult.Text = Convert.ToString(dblNumA - dblNumB);
+                }
+                if (oper == "x")
+                {
+                    Tex_ShowResult.Text = Convert.ToString(dblNumA * dblNumB);
+                }
+                if (oper == "/")
+                {
+                    Tex_ShowResult.Text = Convert.ToString(dblNumA / dblNumB);
+                }
+                if (oper == "+")
+                {
+                    if (dblNumB == 0)
+                    {
+                        MessageBox.Show("除数为零，非法操作！");
+                    }
+                    else
+                    {
+                        Tex_ShowResult.Text = Convert.ToString(dblNumA / dblNumB);
+                    }                    
+                }
+                if (oper == "%")
+                {
+                    Tex_ShowResult.Text = Convert.ToString(dblNumA % dblNumB);
+                }
+                else if (double.Parse(Tex_ShowResult.Text) == Convert.ToInt64(double.Parse(Tex_ShowResult.Text)) &&
+                     0 != double.Parse(Tex_ShowResult.Text))
+                {
+                    Tex_ShowResult.Text += ".";
+                }
+                else WorkLikeFront();
+                takeEqual = false;
+            }
+
+            
+        }
+
+        private void Btn_Clear_Click(object sender, EventArgs e)
+        {
+            Tex_ShowResult.Text = "0";
+            oper = "";
+            point = false;
+            dotNum = 0;
+            dblNumA = 0;
+            takeEqual = true;
+        }
+
+
+        private void WorkLikeFront()
+        {
+            double dblNumB2 = double.Parse(Tex_ShowResult.Text);
+            if (oper == "+")
+            {
+                Tex_ShowResult.Text = Convert.ToString(dblNumA + dblNumB);
+            }
+            if (oper == "-")
+            {
+                Tex_ShowResult.Text = Convert.ToString(dblNumA - dblNumB);
+            }
+            if (oper == "x")
+            {
+                Tex_ShowResult.Text = Convert.ToString(dblNumA * dblNumB);
+            }
+            if (oper == "/")
+            {
+                Tex_ShowResult.Text = Convert.ToString(dblNumA / dblNumB);
+            }
+            if (oper == "+")
+            {
+                if (dblNumB == 0)
+                {
+                    MessageBox.Show("除数为零，非法操作！");
+                }
+                else
+                {
+                    Tex_ShowResult.Text = Convert.ToString(dblNumA / dblNumB);
+                }
+            }
+            if (oper == "%")
+            {
+                Tex_ShowResult.Text = Convert.ToString(dblNumA % dblNumB);
+            }
+            else if (double.Parse(Tex_ShowResult.Text) == Convert.ToInt64(double.Parse(Tex_ShowResult.Text)) &&
+                 0 != double.Parse(Tex_ShowResult.Text))
+            {
+                Tex_ShowResult.Text += ".";
+            }
+        }
     }
 }
