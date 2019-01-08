@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -19,7 +12,7 @@ namespace Calculator
 
         double dblNumA = 0;
         double dblNumB = 0;
-        static string oper = "";
+        static string oper = string.Empty;
         static bool point = false;
         int dotNum = 0;
         double dblNum = 0;
@@ -28,7 +21,7 @@ namespace Calculator
         private void DisPlay(int num)
         {
             //显示要考虑的问题： 是否包含小数，是否存在数字在显示屏幕上
-            if(point)
+            if(!point)
             {
                 dotNum++;
                 if(num == 0)
@@ -43,17 +36,14 @@ namespace Calculator
             else //不包含小数点
             {
 
-                //Tex_ShowResult.Text = Tex_ShowResult.Text.Substring(0, Tex_ShowResult.Text.Length - 1);
+                Tex_ShowResult.Text = Tex_ShowResult.Text.Substring(0, Tex_ShowResult.Text.Length - 1);
                 Tex_ShowResult.Text = Convert.ToString(Convert.ToDouble(Tex_ShowResult.Text) * 10 + num);
                 Tex_ShowResult.Text += ".";
             }
         }
         private void Btn_Add_Click(object sender, EventArgs e)
-        {
-            //加法，累加多个数字
-            //int temp = 0;
-            //temp += int.Parse(Tex_ShowResult.Text);
-            operat("+");
+        {            
+            Operat("+");
         }
 
         private void Btn_1_Click(object sender, EventArgs e)
@@ -107,34 +97,25 @@ namespace Calculator
         {
             DisPlay(9);
         }
-
-        private void operat(string sign)
-        {
-            dblNumA = double.Parse(Tex_ShowResult.Text);
-            point = false;
-            Tex_ShowResult.Text = "0.";
-            oper = sign;
-            takeEqual = true;
-        }
-
+      
         private void Btn_Div_Click(object sender, EventArgs e)
         {
-            operat("/");
+            Operat("/");
         }
 
         private void Btn_Mul_Click(object sender, EventArgs e)
         {
-            operat("x");
+            Operat("x");
         }
 
         private void Btn_Sub_Click(object sender, EventArgs e)
         {
-            operat("-");
+            Operat("-");
         }
 
         private void Btn_Mod_Click(object sender, EventArgs e)
         {
-            operat("%");
+            Operat("%");
         }
 
         private void Btn_Sign_Click(object sender, EventArgs e)
@@ -142,6 +123,14 @@ namespace Calculator
             Tex_ShowResult.Text = Convert.ToString(double.Parse(Tex_ShowResult.Text) * -1);
         }
 
+        private void Operat(string sign)
+        {
+            dblNumA = double.Parse(Tex_ShowResult.Text);
+            point = false;
+            Tex_ShowResult.Text = "0.";
+            oper = sign;
+            takeEqual = true;
+        }
         private void Btn_Eq_Click(object sender, EventArgs e)
         {
             if(takeEqual)
@@ -185,22 +174,27 @@ namespace Calculator
                 }
                 else WorkLikeFront();
                 takeEqual = false;
-            }
-
-            
+            }            
         }
 
+        /// <summary>
+        /// 清屏
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Clear_Click(object sender, EventArgs e)
         {
             Tex_ShowResult.Text = "0";
-            oper = "";
+            oper = string.Empty;
             point = false;
             dotNum = 0;
             dblNumA = 0;
             takeEqual = true;
         }
 
-
+        /// <summary>
+        /// 连续敲击等号，会进行同样的操作
+        /// </summary>
         private void WorkLikeFront()
         {
             double dblNumB2 = double.Parse(Tex_ShowResult.Text);
@@ -240,6 +234,13 @@ namespace Calculator
             {
                 Tex_ShowResult.Text += ".";
             }
+        }
+
+        private void Btn_Dot_Click(object sender, EventArgs e)
+        {
+            Tex_ShowResult.Text = Tex_ShowResult.Text.Substring(0, Tex_ShowResult.Text.Length - 1);
+            Tex_ShowResult.Text += ".";
+            point = true;
         }
     }
 }
