@@ -52,7 +52,7 @@
             // 
             // Btn_Clear
             // 
-            this.Btn_Clear.Location = new System.Drawing.Point(13, 54);
+            this.Btn_Clear.Location = new System.Drawing.Point(13, 55);
             this.Btn_Clear.Name = "Btn_Clear";
             this.Btn_Clear.Size = new System.Drawing.Size(38, 23);
             this.Btn_Clear.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             // Btn_Sign
             // 
-            this.Btn_Sign.Location = new System.Drawing.Point(66, 54);
+            this.Btn_Sign.Location = new System.Drawing.Point(66, 55);
             this.Btn_Sign.Name = "Btn_Sign";
             this.Btn_Sign.Size = new System.Drawing.Size(36, 23);
             this.Btn_Sign.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             // Btn_Mod
             // 
-            this.Btn_Mod.Location = new System.Drawing.Point(117, 54);
+            this.Btn_Mod.Location = new System.Drawing.Point(117, 55);
             this.Btn_Mod.Name = "Btn_Mod";
             this.Btn_Mod.Size = new System.Drawing.Size(36, 23);
             this.Btn_Mod.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             // Btn_7
             // 
-            this.Btn_7.Location = new System.Drawing.Point(13, 97);
+            this.Btn_7.Location = new System.Drawing.Point(13, 98);
             this.Btn_7.Name = "Btn_7";
             this.Btn_7.Size = new System.Drawing.Size(38, 23);
             this.Btn_7.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // Btn_8
             // 
-            this.Btn_8.Location = new System.Drawing.Point(66, 97);
+            this.Btn_8.Location = new System.Drawing.Point(66, 98);
             this.Btn_8.Name = "Btn_8";
             this.Btn_8.Size = new System.Drawing.Size(36, 23);
             this.Btn_8.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             // Btn_9
             // 
-            this.Btn_9.Location = new System.Drawing.Point(117, 97);
+            this.Btn_9.Location = new System.Drawing.Point(117, 98);
             this.Btn_9.Name = "Btn_9";
             this.Btn_9.Size = new System.Drawing.Size(36, 23);
             this.Btn_9.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             // Btn_4
             // 
-            this.Btn_4.Location = new System.Drawing.Point(13, 141);
+            this.Btn_4.Location = new System.Drawing.Point(13, 142);
             this.Btn_4.Name = "Btn_4";
             this.Btn_4.Size = new System.Drawing.Size(38, 23);
             this.Btn_4.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             // Btn_5
             // 
-            this.Btn_5.Location = new System.Drawing.Point(66, 141);
+            this.Btn_5.Location = new System.Drawing.Point(66, 142);
             this.Btn_5.Name = "Btn_5";
             this.Btn_5.Size = new System.Drawing.Size(36, 23);
             this.Btn_5.TabIndex = 7;
@@ -132,7 +132,7 @@
             // 
             // Btn_6
             // 
-            this.Btn_6.Location = new System.Drawing.Point(117, 141);
+            this.Btn_6.Location = new System.Drawing.Point(117, 142);
             this.Btn_6.Name = "Btn_6";
             this.Btn_6.Size = new System.Drawing.Size(36, 23);
             this.Btn_6.TabIndex = 8;
@@ -142,7 +142,7 @@
             // 
             // Btn_1
             // 
-            this.Btn_1.Location = new System.Drawing.Point(13, 185);
+            this.Btn_1.Location = new System.Drawing.Point(13, 186);
             this.Btn_1.Name = "Btn_1";
             this.Btn_1.Size = new System.Drawing.Size(38, 23);
             this.Btn_1.TabIndex = 9;
@@ -152,7 +152,7 @@
             // 
             // Btn_2
             // 
-            this.Btn_2.Location = new System.Drawing.Point(66, 185);
+            this.Btn_2.Location = new System.Drawing.Point(66, 186);
             this.Btn_2.Name = "Btn_2";
             this.Btn_2.Size = new System.Drawing.Size(36, 23);
             this.Btn_2.TabIndex = 10;
@@ -162,7 +162,7 @@
             // 
             // Btn_3
             // 
-            this.Btn_3.Location = new System.Drawing.Point(117, 185);
+            this.Btn_3.Location = new System.Drawing.Point(117, 186);
             this.Btn_3.Name = "Btn_3";
             this.Btn_3.Size = new System.Drawing.Size(36, 23);
             this.Btn_3.TabIndex = 11;
@@ -172,7 +172,7 @@
             // 
             // Btn_0
             // 
-            this.Btn_0.Location = new System.Drawing.Point(12, 225);
+            this.Btn_0.Location = new System.Drawing.Point(12, 226);
             this.Btn_0.Name = "Btn_0";
             this.Btn_0.Size = new System.Drawing.Size(90, 23);
             this.Btn_0.TabIndex = 12;
@@ -182,7 +182,7 @@
             // 
             // Btn_Dot
             // 
-            this.Btn_Dot.Location = new System.Drawing.Point(117, 225);
+            this.Btn_Dot.Location = new System.Drawing.Point(117, 226);
             this.Btn_Dot.Name = "Btn_Dot";
             this.Btn_Dot.Size = new System.Drawing.Size(36, 23);
             this.Btn_Dot.TabIndex = 14;
@@ -192,7 +192,7 @@
             // 
             // Btn_Eq
             // 
-            this.Btn_Eq.Location = new System.Drawing.Point(169, 225);
+            this.Btn_Eq.Location = new System.Drawing.Point(169, 226);
             this.Btn_Eq.Name = "Btn_Eq";
             this.Btn_Eq.Size = new System.Drawing.Size(36, 23);
             this.Btn_Eq.TabIndex = 19;
@@ -202,7 +202,7 @@
             // 
             // Btn_Add
             // 
-            this.Btn_Add.Location = new System.Drawing.Point(169, 185);
+            this.Btn_Add.Location = new System.Drawing.Point(169, 186);
             this.Btn_Add.Name = "Btn_Add";
             this.Btn_Add.Size = new System.Drawing.Size(36, 23);
             this.Btn_Add.TabIndex = 18;
@@ -212,7 +212,7 @@
             // 
             // Btn_Sub
             // 
-            this.Btn_Sub.Location = new System.Drawing.Point(169, 141);
+            this.Btn_Sub.Location = new System.Drawing.Point(169, 142);
             this.Btn_Sub.Name = "Btn_Sub";
             this.Btn_Sub.Size = new System.Drawing.Size(36, 23);
             this.Btn_Sub.TabIndex = 17;
@@ -222,7 +222,7 @@
             // 
             // Btn_Mul
             // 
-            this.Btn_Mul.Location = new System.Drawing.Point(169, 97);
+            this.Btn_Mul.Location = new System.Drawing.Point(169, 98);
             this.Btn_Mul.Name = "Btn_Mul";
             this.Btn_Mul.Size = new System.Drawing.Size(36, 23);
             this.Btn_Mul.TabIndex = 16;
@@ -232,7 +232,7 @@
             // 
             // Btn_Div
             // 
-            this.Btn_Div.Location = new System.Drawing.Point(169, 54);
+            this.Btn_Div.Location = new System.Drawing.Point(169, 55);
             this.Btn_Div.Name = "Btn_Div";
             this.Btn_Div.Size = new System.Drawing.Size(36, 23);
             this.Btn_Div.TabIndex = 15;
@@ -242,17 +242,18 @@
             // 
             // Tex_ShowResult
             // 
-            this.Tex_ShowResult.Location = new System.Drawing.Point(12, 23);
+            this.Tex_ShowResult.Location = new System.Drawing.Point(12, 24);
             this.Tex_ShowResult.Name = "Tex_ShowResult";
             this.Tex_ShowResult.Size = new System.Drawing.Size(193, 20);
             this.Tex_ShowResult.TabIndex = 20;
+            this.Tex_ShowResult.Text = "0";
             this.Tex_ShowResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(221, 264);
+            this.ClientSize = new System.Drawing.Size(230, 271);
             this.Controls.Add(this.Tex_ShowResult);
             this.Controls.Add(this.Btn_Eq);
             this.Controls.Add(this.Btn_Add);
